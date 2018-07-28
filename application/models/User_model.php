@@ -10,13 +10,14 @@ class User_model extends CI_Model {
         $this->load->database();
     }
     
-    public function getAll() {
+    public function getAll($limit="10", $start="0") {
         $this->table_name = 'vacancylowo';
 
         $this->db->from("vacancylowo v");
         $this->db->join("employers e", "e.empid=v.empid", "left");
         $this->db->order_by("v.vacid desc");
-        $this->db->limit(10);
+        $this->db->limit($limit, $start);
+        // $this->db->start($start);
 
         return $this->db->get()->result_array();
     }
