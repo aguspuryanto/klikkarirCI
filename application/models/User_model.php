@@ -11,8 +11,14 @@ class User_model extends CI_Model {
     }
     
     public function getAll() {
-        $this->table_name = 'ecatalog';
-        return $this->db->from($this->table_name)->get()->result_array();
+        $this->table_name = 'vacancylowo';
+
+        $this->db->from("vacancylowo v");
+        $this->db->join("employers e", "e.empid=v.empid", "left");
+        $this->db->order_by("v.vacid desc");
+        $this->db->limit(10);
+
+        return $this->db->get()->result_array();
     }
  
 }
