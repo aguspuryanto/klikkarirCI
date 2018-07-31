@@ -8,11 +8,11 @@
       <h3>SIAP MERAIH KARIER IMPIAN ANDA?</h3>
       <form class="form-inline hidden-xs ng-pristine ng-valid" action="https://www.qerja.com/search">
           <div class="form-group">
-            <div class="input-group input-group-lg">
+            <div class="input-group">
               <div class="input-group-addon">
                 <i class="fa fa-search"></i>
               </div>
-              <input class="form-control" type="text" name="keyword" placeholder="Ketik nama Perusahaan atau Posisi" autocomplete="off">
+              <input class="form-control" type="text" name="keyword" placeholder="Ketik nama Perusahaan atau Posisi" autocomplete="off" style="min-width:450px;">
               <span class="input-group-btn">
                 <button class="btn btn-warning" type="submit">GO</button>
               </span>
@@ -43,7 +43,7 @@
                           <i class="glyphicon glyphicon-heart"></i>
                           <i class="glyphicon glyphicon-star"></i>
                       </div>
-                      <p><strong>{{user.posisi}}</strong></p>
+                      <p><a href="<?php echo site_url('jobs/{{user.vacid}}'); ?>"><strong>{{user.posisi}}</strong></a></p>
                       <p><i class="glyphicon glyphicon-home"></i> {{user.nama}} </p>
                       <span><i class="glyphicon glyphicon-usd"></i> {{user.gaji}}</span>
                       <span><i class="glyphicon glyphicon-map-marker"></i> {{user.lokasi}}</span> <span class="pull-right"><i class="glyphicon glyphicon-time"></i> {{user.post | date:''}}</span>
@@ -51,39 +51,31 @@
                   </div>
 
                 </li>
+                <li class="list-group-item">
+                  <nav class="text-center" aria-label="Page navigation">
+                    <ul class="pagination">
+                      <li>
+                        <a href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li>
+                        <a href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </li>
           </ul>
 
           <!--Tampilkan pagination-->
           <?php //echo $pagination; ?>
-
-          <!-- <nav class="text-center" aria-label="Page navigation">
-            <ul class="pagination">
-              <li>
-                <a href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
-              </li>
-              <li><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li>
-                <a href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
-              </li>
-            </ul>
-          </nav> -->
-          <!-- <uib-pagination total-items="totalItems" ng-model="currentPage" items-per-page="itemsPerPage"></uib-pagination> -->
-
-          <!-- <ul uib-pagination total-items="totalItems" ng-model="currentPage" items-per-page="itemsPerPage"></ul> -->
-
-          <div data-pagination=""
-            data-num-pages="numOfPages()"
-            data-current-page="curPage"
-            data-max-size="maxSize"
-            data-boundary-links="true"></div>
 
         </div>
         <div class="col-md-3"></div>

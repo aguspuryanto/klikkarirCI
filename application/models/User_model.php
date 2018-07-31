@@ -21,6 +21,13 @@ class User_model extends CI_Model {
 
         return $this->db->get()->result_array();
     }
+
+    public function getDetail($id){
+        // $this->table_name = 'vacancylowo';
+        $this->db->from("vacancylowo")->where("vacid", $id);
+
+        return $this->db->get()->result_array();
+    }
  
 }
  

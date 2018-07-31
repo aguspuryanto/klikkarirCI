@@ -2322,3 +2322,7 @@ span.email-notes {
 }
 
 #content .list-group { margin-bottom: 0px; }
+#content .list-group-item:last-child {
+  padding: 0px;
+  /*background-color: #ccc;*/
+}

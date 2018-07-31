@@ -72,4 +72,12 @@ class Welcome extends CI_Controller {
 
 		$this->load->view('eBusiness/index');
 	}
+
+    public function jobs($id){
+        // echo "Jobs: " . $id;
+        $data['data'] = $this->user_model->getDetail($id);
+        // echo var_dump($data['data']); die();
+
+        $this->load->view('eBusiness/single', $data);
+    }
 }
