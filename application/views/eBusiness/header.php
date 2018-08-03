@@ -56,27 +56,29 @@
               </div>
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-left">
                   <li class="active">
-                    <a class="page-scroll" href="#home">Home</a>
+                    <a href="<?=site_url('jobs/');?>">CARI LOWONGAN</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#about">About</a>
+                    <a href="<?=site_url('kategori/');?>">KATEGORI</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#services">Services</a>
+                    <a href="<?=site_url('gaji/');?>">GAJI</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#team">Team</a>
+                    <a href="<?=site_url('blog/');?>">TIPS KARIR</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    <a href="<?=site_url('blacklist/');?>">BLACKLIST</a>
+                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li>
+                    <a href="<?=site_url('login/');?>">LOGIN</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#blog">Blog</a>
-                  </li>
-                  <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
+                    <a href="<?=site_url('daftar/');?>">DAFTAR</a>
                   </li>
                 </ul>
               </div>

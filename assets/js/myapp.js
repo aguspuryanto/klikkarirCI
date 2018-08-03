@@ -8,7 +8,7 @@ app.controller('myCtrl', function($scope,$http) {
   	$scope.maxSize = 5;
 
     $scope.users = [];
-    $http.get('index.php/angularjs/get_list').success(function($data){
+    $http.get(base_url + 'index.php/angularjs/get_list').success(function($data){
     	$scope.users=$data;
     });
     

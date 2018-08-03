@@ -4,36 +4,90 @@
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron" style="margin-top: 70px">
 
-    <div class="container text-center">
-      <h3>SIAP MERAIH KARIER IMPIAN ANDA?</h3>
-      <form class="form-inline hidden-xs ng-pristine ng-valid" action="https://www.qerja.com/search">
-          <div class="form-group">
-            <div class="input-group">
-              <div class="input-group-addon">
-                <i class="fa fa-search"></i>
-              </div>
-              <input class="form-control" type="text" name="keyword" placeholder="Ketik nama Perusahaan atau Posisi" autocomplete="off" style="min-width:450px;">
-              <span class="input-group-btn">
-                <button class="btn btn-warning" type="submit">GO</button>
-              </span>
-            </div>
-          </div>
-        </form>
-
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <h3><?=$data[0]['posisi'];?></h3>
+          <span><i class="glyphicon glyphicon-home"></i> <?=$data[0]['nama'];?></span>
+          <span><i class="glyphicon glyphicon-map-marker"></i> <?=$data[0]['lokasi'];?></span>
+          <span><i class="glyphicon glyphicon-tag"></i> <?=$data[0]['kategori'];?></span>
+        </div>
+        <div class="col-md-3">
+          <img class="img-object" src="http://klikkarir.com/Pic_Emp_Logo/<?=$data[0]['empid'];?>.JPG">
+        </div>
+      </div>
     </div>
 
   </div>
 
   <section id="content">
-    <div class="container">
+    <div class="container clearfix">
       <div class="row">
         
-        <div class="col-md-9" ng-controller="myCtrl">
+        <div class="col-md-9">
 
-          <?php var_dump($data);?>
+          <h4>Detail</h4>
+          <div class="row">
+            <div class="col-md-6">
+              <table class="table table-bordered">
+                <tr>
+                    <td>Gender</td>
+                    <td width="1%">:</td>
+                    <td><?=$data[0]['kelamin'];?></td>
+                </tr>
+                <tr>
+                    <td>Pengalaman</td>
+                    <td width="1%">:</td>
+                    <td><?=$data[0]['exp'];?></td>
+                </tr>
+                <tr>
+                    <td>Pendidikan</td>
+                    <td width="1%">:</td>
+                    <td><?=$data[0]['pendidikan'];?></td>
+                </tr>
+                <tr>
+                    <td>Gaji</td>
+                    <td width="1%">:</td>
+                    <td><?=$data[0]['gaji'];?></td>
+                </tr>
+                <tr>
+                    <td>Status Karyawan</td>
+                    <td width="1%">:</td>
+                    <td><?=$data[0]['tipejob'];?></td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-md-6"></div>
+          </div>
+
+          <h4>Deskripsi</h4>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <p><?=$data[0]['desjob'];?></p>
+              <p><?=nl2br($data[0]['req']);?></p>
+            </div>
+            <div class="panel-footer clearfix">
+              <p class="pull-right">
+                <button class="btn btn-primary">Apply</button>
+              </p>
+            </div>
+          </div>
+
+          <!-- <?php var_dump($data);?> -->
 
         </div>
-        <div class="col-md-3"></div>
+        <div class="col-md-3">
+          
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h4 class="panel-title">Lowongan Serupa</h4>
+            </div>
+            <div class="panel-body">
+              
+            </div>
+          </div>
+
+        </div>
         
       </div>
     </div>

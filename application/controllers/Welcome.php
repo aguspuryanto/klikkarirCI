@@ -73,7 +73,12 @@ class Welcome extends CI_Controller {
 		$this->load->view('eBusiness/index');
 	}
 
-    public function jobs($id){
+    public function jobs(){
+        $data['data'] = $this->user_model->getAll();
+        // echo json_encode($data);
+    }
+
+    public function jobsid($id){
         // echo "Jobs: " . $id;
         $data['data'] = $this->user_model->getDetail($id);
         // echo var_dump($data['data']); die();

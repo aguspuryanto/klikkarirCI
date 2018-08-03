@@ -255,11 +255,11 @@ div#preloader {
 .main-menu ul.navbar-nav li a {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   color: #fff;
-  font-size: 15px;
+  /*font-size: 15px;*/
   font-weight: 500;
   padding: 24px 0px;
   text-transform: capitalize;
-  letter-spacing: 1px;
+  /*letter-spacing: 1px;*/
 }
 
 .main-menu ul.navbar-nav li.active a::after {
@@ -2326,3 +2326,4 @@ span.email-notes {
   padding: 0px;
   /*background-color: #ccc;*/
 }
+#content .panel-body { padding: 15px; }
