@@ -10,9 +10,31 @@ class User_model extends CI_Model {
         $this->load->database();
     }
     
-    public function getAll() {
+    public function getAll($limit="10", $start="0") {
         $this->table_name = 'vacancylowo';
-        return $this->db->from($this->table_name)->order_by("vacid desc")->limit(10)->get()->result_array();
+
+        $this->db->from("vacancylowo v");
+        $this->db->join("employers e", "e.empid=v.empid", "left");
+        $this->db->order_by("v.vacid desc");
+        $this->db->limit($limit, $start);
+        // $this->db->start($start);
+
+        return $this->db->get()->result_array();
+    }
+
+    public function getDetail($id){
+        // $this->table_name = 'vacancylowo';
+        $this->db->from("vacancylowo")->where("vacid", $id);
+
+        return $this->db->get()->result_array();
+    }
+
+    public function getKategori(){
+        // $this->table_name = 'vacancylowo';
+		$this->db->select('DISTINCT(kategori)');
+        $this->db->from("vacancylowo");
+
+        return $this->db->get()->result_array();
     }
  
 }

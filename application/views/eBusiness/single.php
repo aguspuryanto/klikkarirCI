@@ -63,12 +63,12 @@
           <h4>Deskripsi</h4>
           <div class="panel panel-default">
             <div class="panel-body">
-              <p><?=$data[0]['desjob'];?></p>
+              <p><?=nl2br($data[0]['desjob']);?></p>
               <p><?=nl2br($data[0]['req']);?></p>
             </div>
             <div class="panel-footer clearfix">
               <p class="pull-right">
-                <button class="btn btn-primary">Apply</button>
+                <a href="<?=site_url('index.php/apply/'.$data[0]['vacid']); ?>" class="btn btn-primary">Apply</a>
               </p>
             </div>
           </div>

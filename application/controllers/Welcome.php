@@ -85,4 +85,20 @@ class Welcome extends CI_Controller {
 
         $this->load->view('eBusiness/single', $data);
     }
+
+    public function apply($id){
+        // echo "Apply: " . $id;
+        $data['data'] = $this->user_model->getDetail($id);
+        // echo var_dump($data['data']); die();
+
+        $this->load->view('eBusiness/apply', $data);
+    }
+
+    public function kategori(){
+        // echo "Apply: " . $id;
+        $data['data'] = $this->user_model->getKategori();
+        // echo var_dump($data['data']); die();
+
+        $this->load->view('eBusiness/kategori', $data);
+    }
 }

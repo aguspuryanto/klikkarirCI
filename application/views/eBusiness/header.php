@@ -48,7 +48,7 @@
 										<span class="icon-bar"></span>
 									</button>
                 <!-- Brand -->
-                <a class="navbar-brand page-scroll sticky-logo" href="index.html">
+                <a class="navbar-brand page-scroll sticky-logo" href="<?=site_url();?>">
                   <h1><span>e</span>Business</h1>
                   <!-- Uncomment below if you prefer to use an image logo -->
                   <!-- <img src="<?php echo base_url('assets/img/logo.png');?>" alt="" title=""> -->

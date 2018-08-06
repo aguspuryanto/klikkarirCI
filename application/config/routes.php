@@ -53,5 +53,8 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['jobs'] = 'welcome/index';
+$route['apply/(:num)'] = 'welcome/apply/$1';
 $route['jobs/(:num)'] = 'welcome/jobsid/$1';
+$route['jobs'] = 'welcome/index';
+
+$route['kategori'] = 'welcome/kategori';

@@ -9,12 +9,12 @@
       <form class="form-inline hidden-xs ng-pristine ng-valid" action="https://www.qerja.com/search">
           <div class="form-group">
             <div class="input-group">
-              <div class="input-group-addon">
+              <!-- <div class="input-group-addon">
                 <i class="fa fa-search"></i>
-              </div>
-              <input class="form-control" type="text" name="keyword" placeholder="Ketik nama Perusahaan atau Posisi" autocomplete="off" style="min-width:450px;">
+              </div> -->
+              <input class="form-control input-lg" type="text" name="keyword" placeholder="Ketik nama Perusahaan atau Posisi" autocomplete="off" style="min-width:450px;">
               <span class="input-group-btn">
-                <button class="btn btn-warning" type="submit">GO</button>
+                <button class="btn btn-lg btn-warning" type="submit">GO</button>
               </span>
             </div>
           </div>
@@ -43,7 +43,7 @@
                           <i class="glyphicon glyphicon-heart"></i>
                           <i class="glyphicon glyphicon-star"></i>
                       </div>
-                      <p><a href="<?php echo site_url('jobs/{{user.vacid}}'); ?>"><strong>{{user.posisi}}</strong></a></p>
+                      <p><a href="<?=site_url('index.php/jobs/{{user.vacid}}'); ?>"><strong>{{user.posisi}}</strong></a></p>
                       <p><i class="glyphicon glyphicon-home"></i> {{user.nama}} </p>
                       <span><i class="glyphicon glyphicon-usd"></i> {{user.gaji}}</span>
                       <span><i class="glyphicon glyphicon-map-marker"></i> {{user.lokasi}}</span> <span class="pull-right"><i class="glyphicon glyphicon-time"></i> {{user.post | date:''}}</span>
